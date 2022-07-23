@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <!-- tailwinddcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    {% block content %} {% endblock content %}
+    <!-- incldue footer -->
+    {% include 'components/footer.html' %}
+    <script>
+      const user_menu_button = document.getElementById("user-menu-button");
+      const user_menu_show = document.getElementById("user-dropdown");
+
+      user_menu_button.onclick = () => {
+        user_menu_show.classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
